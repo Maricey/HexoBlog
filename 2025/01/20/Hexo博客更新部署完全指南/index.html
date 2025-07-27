@@ -1,0 +1,871 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/HexoBlog/img/head.jpg">
+  <link rel="icon" href="/HexoBlog/img/head.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Maricey">
+  <meta name="keywords" content="Hexo更新,博客部署,GitHub Pages部署,静态网站维护,内容更新">
+  
+    <meta name="description" content="详细介绍如何更新和部署 Hexo 博客，包括创建新文章、编辑内容、本地预览、一键部署等完整流程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客更新部署完全指南">
+<meta property="og:url" content="https://maricey.github.io/HexoBlog/2025/01/20/Hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E9%83%A8%E7%BD%B2%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="Home">
+<meta property="og:description" content="详细介绍如何更新和部署 Hexo 博客，包括创建新文章、编辑内容、本地预览、一键部署等完整流程。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-01-20T07:00:00.000Z">
+<meta property="article:modified_time" content="2025-01-20T07:00:00.000Z">
+<meta property="article:author" content="Maricey">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="博客部署">
+<meta property="article:tag" content="GitHub Pages">
+<meta property="article:tag" content="静态网站">
+<meta property="article:tag" content="网站维护">
+<meta property="article:tag" content="内容管理">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>Hexo博客更新部署完全指南 - Home</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/HexoBlog/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/HexoBlog/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/HexoBlog/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"maricey.github.io","root":"/HexoBlog/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":"3e384ac8b80247a65b488b6040c23850","google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/HexoBlog/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/HexoBlog/js/utils.js" ></script>
+  <script  src="/HexoBlog/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?3e384ac8b80247a65b488b6040c23850";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/HexoBlog/">
+      <strong>41P&#39;s Corner</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HexoBlog/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HexoBlog/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HexoBlog/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HexoBlog/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HexoBlog/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/HexoBlog/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/HexoBlog/img/ayaka.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Hexo博客更新部署完全指南"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-01-20 15:00" pubdate>
+          2025年1月20日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          10 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Hexo博客更新部署完全指南</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Hexo博客更新部署完全指南"><a href="#Hexo博客更新部署完全指南" class="headerlink" title="Hexo博客更新部署完全指南"></a>Hexo博客更新部署完全指南</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>搭建好 Hexo 博客后，日常的内容更新和部署是维护博客的重要环节。本文将详细介绍如何高效地更新和部署你的 Hexo 博客，让你轻松管理个人网站。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
+<li><a href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">快速开始</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0">创建新文章</a></li>
+<li><a href="#%E7%BC%96%E8%BE%91%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9">编辑文章内容</a></li>
+<li><a href="#%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88">本地预览</a></li>
+<li><a href="#%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF">部署上线</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5">常用命令速查</a></li>
+<li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li>
+<li><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4">故障排除</a></li>
+</ul>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="🚀-一键更新部署（推荐）"><a href="#🚀-一键更新部署（推荐）" class="headerlink" title="🚀 一键更新部署（推荐）"></a>🚀 一键更新部署（推荐）</h3><p>最简单的更新方式，一条命令完成所有操作：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>这个命令会：</p>
+<ol>
+<li><strong>清理</strong>：删除旧的生成文件</li>
+<li><strong>生成</strong>：重新生成静态文件</li>
+<li><strong>部署</strong>：自动推送到 GitHub Pages</li>
+</ol>
+<h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><h3 id="1-使用命令行创建"><a href="#1-使用命令行创建" class="headerlink" title="1. 使用命令行创建"></a>1. 使用命令行创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;文章标题&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>这会在 <code>source/_posts/</code> 目录下创建一个新的 Markdown 文件。</p>
+<h3 id="2-手动创建"><a href="#2-手动创建" class="headerlink" title="2. 手动创建"></a>2. 手动创建</h3><p>你也可以直接在 <code>source/_posts/</code> 目录下手动创建 <code>.md</code> 文件。</p>
+<h3 id="3-文章-Front-matter"><a href="#3-文章-Front-matter" class="headerlink" title="3. 文章 Front-matter"></a>3. 文章 Front-matter</h3><p>每篇文章的头部需要包含以下信息：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2025-01-20 15:00:00</span><br><span class="hljs-attr">updated:</span> <span class="hljs-number">2025-01-20 15:00:00</span><br><span class="hljs-attr">categories:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">技术教程</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Hexo</span><br><span class="hljs-attr">tags:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Hexo</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">博客部署</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Pages</span><br><span class="hljs-attr">keywords:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">关键词1</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">关键词2</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">文章描述</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="编辑文章内容"><a href="#编辑文章内容" class="headerlink" title="编辑文章内容"></a>编辑文章内容</h2><h3 id="1-使用-Markdown-语法"><a href="#1-使用-Markdown-语法" class="headerlink" title="1. 使用 Markdown 语法"></a>1. 使用 Markdown 语法</h3><p>Hexo 支持完整的 Markdown 语法：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 一级标题</span><br><span class="hljs-section">## 二级标题</span><br><span class="hljs-section">### 三级标题</span><br><br><span class="hljs-strong">**粗体文本**</span><br><span class="hljs-emphasis">*斜体文本*</span><br><br><span class="hljs-bullet">-</span> 列表项1<br><span class="hljs-bullet">-</span> 列表项2<br><br>[<span class="hljs-string">链接文本</span>](<span class="hljs-link">URL</span>)<br><br>![<span class="hljs-string">图片描述</span>](<span class="hljs-link">图片URL</span>)<br><br><span class="hljs-code">`代码片段`</span><br><br><span class="hljs-code">```javascript</span><br><span class="hljs-code">// 代码块</span><br><span class="hljs-code">function hello() &#123;</span><br><span class="hljs-code">    console.log(&quot;Hello World!&quot;);</span><br><span class="hljs-code">&#125;</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><br>### <span class="hljs-number">2</span>. 插入图片<br><br>将图片放在 `source/img/` 目录下，然后在文章中引用：<br><br>```markdown<br>![图片描述](/img/图片名称.jpg)<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-使用-Fluid-主题标签"><a href="#3-使用-Fluid-主题标签" class="headerlink" title="3. 使用 Fluid 主题标签"></a>3. 使用 Fluid 主题标签</h3><p>Fluid 主题提供了丰富的标签功能：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% note primary %&#125;<br>这是一个提示框<br>&#123;% endnote %&#125;<br><br>&#123;% tabs 标签页 %&#125;<br>&lt;!-- tab 标签1 --&gt;<br>内容1<br>&lt;!-- endtab --&gt;<br>&lt;!-- tab 标签2 --&gt;<br>内容2<br>&lt;!-- endtab --&gt;<br>&#123;% endtabs %&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><h3 id="启动本地服务器"><a href="#启动本地服务器" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure>
+
+<p>然后访问 <code>http://localhost:4000</code> 预览你的博客。</p>
+<h3 id="实时预览"><a href="#实时预览" class="headerlink" title="实时预览"></a>实时预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server --draft<br></code></pre></td></tr></table></figure>
+
+<p>这会显示草稿文章。</p>
+<h2 id="部署上线"><a href="#部署上线" class="headerlink" title="部署上线"></a>部署上线</h2><h3 id="1-生成静态文件"><a href="#1-生成静态文件" class="headerlink" title="1. 生成静态文件"></a>1. 生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate<br><span class="hljs-comment"># 或简写</span><br>hexo g<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-部署到-GitHub-Pages"><a href="#2-部署到-GitHub-Pages" class="headerlink" title="2. 部署到 GitHub Pages"></a>2. 部署到 GitHub Pages</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br><span class="hljs-comment"># 或简写</span><br>hexo d<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-一键部署（推荐）"><a href="#3-一键部署（推荐）" class="headerlink" title="3. 一键部署（推荐）"></a>3. 一键部署（推荐）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure>
+
+<h2 id="常用命令速查"><a href="#常用命令速查" class="headerlink" title="常用命令速查"></a>常用命令速查</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>简写</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>hexo new &quot;标题&quot;</code></td>
+<td>-</td>
+<td>创建新文章</td>
+</tr>
+<tr>
+<td><code>hexo new page &quot;页面名&quot;</code></td>
+<td>-</td>
+<td>创建新页面</td>
+</tr>
+<tr>
+<td><code>hexo clean</code></td>
+<td>-</td>
+<td>清理生成文件</td>
+</tr>
+<tr>
+<td><code>hexo generate</code></td>
+<td><code>hexo g</code></td>
+<td>生成静态文件</td>
+</tr>
+<tr>
+<td><code>hexo deploy</code></td>
+<td><code>hexo d</code></td>
+<td>部署到 GitHub Pages</td>
+</tr>
+<tr>
+<td><code>hexo server</code></td>
+<td><code>hexo s</code></td>
+<td>启动本地服务器</td>
+</tr>
+<tr>
+<td><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></td>
+<td>-</td>
+<td>一键更新部署</td>
+</tr>
+</tbody></table>
+<h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><h3 id="1-工作流程"><a href="#1-工作流程" class="headerlink" title="1. 工作流程"></a>1. 工作流程</h3><ol>
+<li><strong>创建文章</strong>：<code>hexo new &quot;标题&quot;</code></li>
+<li><strong>编辑内容</strong>：使用你喜欢的编辑器</li>
+<li><strong>本地预览</strong>：<code>hexo server</code> 检查效果</li>
+<li><strong>部署上线</strong>：<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li>
+</ol>
+<h3 id="2-版本管理"><a href="#2-版本管理" class="headerlink" title="2. 版本管理"></a>2. 版本管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 提交源代码到 Git</span><br>git add .<br>git commit -m <span class="hljs-string">&quot;添加新文章：文章标题&quot;</span><br>git push<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-自动化脚本"><a href="#3-自动化脚本" class="headerlink" title="3. 自动化脚本"></a>3. 自动化脚本</h3><p>创建 <code>update.bat</code> 文件（Windows）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs batch">@echo off<br>echo 正在更新博客...<br>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br>echo 更新完成！<br>pause<br></code></pre></td></tr></table></figure>
+
+<p>创建 <code>update.sh</code> 文件（Linux&#x2F;Mac）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;正在更新博客...&quot;</span><br>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;更新完成！&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-定期备份"><a href="#4-定期备份" class="headerlink" title="4. 定期备份"></a>4. 定期备份</h3><ul>
+<li>定期将源代码推送到 GitHub</li>
+<li>备份重要的配置文件</li>
+<li>保存自定义的主题文件</li>
+</ul>
+<h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><h3 id="1-部署失败"><a href="#1-部署失败" class="headerlink" title="1. 部署失败"></a>1. 部署失败</h3><p><strong>问题</strong>：<code>hexo deploy</code> 失败<br><strong>解决</strong>：</p>
+<ul>
+<li>检查网络连接</li>
+<li>确认 GitHub 仓库权限</li>
+<li>检查 SSH 密钥配置</li>
+</ul>
+<h3 id="2-页面显示异常"><a href="#2-页面显示异常" class="headerlink" title="2. 页面显示异常"></a>2. 页面显示异常</h3><p><strong>问题</strong>：部署后页面显示不正确<br><strong>解决</strong>：</p>
+<ul>
+<li>运行 <code>hexo clean</code> 清理缓存</li>
+<li>检查主题配置</li>
+<li>查看浏览器控制台错误</li>
+</ul>
+<h3 id="3-图片无法显示"><a href="#3-图片无法显示" class="headerlink" title="3. 图片无法显示"></a>3. 图片无法显示</h3><p><strong>问题</strong>：图片显示 404 错误<br><strong>解决</strong>：</p>
+<ul>
+<li>确认图片路径正确</li>
+<li>检查图片是否在 <code>source/img/</code> 目录</li>
+<li>重新生成和部署</li>
+</ul>
+<h3 id="4-搜索功能异常"><a href="#4-搜索功能异常" class="headerlink" title="4. 搜索功能异常"></a>4. 搜索功能异常</h3><p><strong>问题</strong>：本地搜索不工作<br><strong>解决</strong>：</p>
+<ul>
+<li>确认生成了 <code>local-search.xml</code> 文件</li>
+<li>检查 Fluid 主题搜索配置</li>
+<li>清除浏览器缓存</li>
+</ul>
+<h2 id="高级技巧"><a href="#高级技巧" class="headerlink" title="高级技巧"></a>高级技巧</h2><h3 id="1-草稿功能"><a href="#1-草稿功能" class="headerlink" title="1. 草稿功能"></a>1. 草稿功能</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 创建草稿</span><br>hexo new draft <span class="hljs-string">&quot;草稿标题&quot;</span><br><br><span class="hljs-comment"># 发布草稿</span><br>hexo publish <span class="hljs-string">&quot;草稿标题&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-多环境部署"><a href="#2-多环境部署" class="headerlink" title="2. 多环境部署"></a>2. 多环境部署</h3><p>可以配置多个部署目标：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>    <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:username/repo.git</span><br>    <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>    <span class="hljs-attr">repo:</span> <span class="hljs-string">git@gitlab.com:username/repo.git</span><br>    <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3-自定义域名"><a href="#3-自定义域名" class="headerlink" title="3. 自定义域名"></a>3. 自定义域名</h3><p>在 <code>source/</code> 目录下创建 <code>CNAME</code> 文件：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">yourdomain.<span class="hljs-keyword">com</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-性能优化"><a href="#4-性能优化" class="headerlink" title="4. 性能优化"></a>4. 性能优化</h3><ul>
+<li>压缩图片</li>
+<li>使用 CDN</li>
+<li>启用 Gzip 压缩</li>
+<li>优化 CSS 和 JS</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过本文的指南，你应该能够：</p>
+<ol>
+<li>✅ 熟练创建和编辑文章</li>
+<li>✅ 使用本地预览功能</li>
+<li>✅ 一键部署到 GitHub Pages</li>
+<li>✅ 掌握常用命令和最佳实践</li>
+<li>✅ 解决常见问题</li>
+</ol>
+<p>记住，<strong>一键更新命令</strong>是你的好朋友：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure>
+
+<p>现在开始写你的博客吧！🎉</p>
+<hr>
+<p><strong>相关文章</strong>：</p>
+<ul>
+<li><a href="/2025/07/26/hexo-fluid-configuration-guide/">Hexo + Fluid 主题配置完全指南</a></li>
+<li><a href="/2025/01/20/about-page-configuration-guide/">About 页面配置完全指南</a></li>
+</ul>
+<p><strong>最后更新</strong>：2025年1月20日</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/HexoBlog/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" class="category-chain-item">技术教程</a>
+  
+  
+    <span>></span>
+    
+  <a href="/HexoBlog/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/Hexo/" class="category-chain-item">Hexo</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/HexoBlog/tags/Hexo/" class="print-no-link">#Hexo</a>
+      
+        <a href="/HexoBlog/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/" class="print-no-link">#博客部署</a>
+      
+        <a href="/HexoBlog/tags/GitHub-Pages/" class="print-no-link">#GitHub Pages</a>
+      
+        <a href="/HexoBlog/tags/%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99/" class="print-no-link">#静态网站</a>
+      
+        <a href="/HexoBlog/tags/%E7%BD%91%E7%AB%99%E7%BB%B4%E6%8A%A4/" class="print-no-link">#网站维护</a>
+      
+        <a href="/HexoBlog/tags/%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86/" class="print-no-link">#内容管理</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Hexo博客更新部署完全指南</div>
+      <div>https://maricey.github.io/HexoBlog/2025/01/20/Hexo博客更新部署完全指南/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Maricey</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年1月20日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/HexoBlog/2025/07/26/hexo-fluid-configuration-guide/" title="Hexo + Fluid 主题配置完全指南">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hexo + Fluid 主题配置完全指南</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/HexoBlog/2025/01/20/about-page-configuration-guide/" title="About 页面配置完全指南">
+                        <span class="hidden-mobile">About 页面配置完全指南</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/HexoBlog/js/events.js" ></script>
+<script  src="/HexoBlog/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/HexoBlog/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/HexoBlog/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/HexoBlog/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

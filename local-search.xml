@@ -4,19 +4,6 @@
   
   
   <entry>
-    <title>我的新文章标题</title>
-    <link href="/HexoBlog/2025/07/27/%E6%88%91%E7%9A%84%E6%96%B0%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/"/>
-    <url>/HexoBlog/2025/07/27/%E6%88%91%E7%9A%84%E6%96%B0%E6%96%87%E7%AB%A0%E6%A0%87%E9%A2%98/</url>
-    
-    <content type="html"><![CDATA[]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Hello World</title>
     <link href="/HexoBlog/2025/07/26/hello-world/"/>
     <url>/HexoBlog/2025/07/26/hello-world/</url>
@@ -48,15 +35,52 @@
     
     <tags>
       
-      <tag>博客搭建</tag>
-      
       <tag>Hexo</tag>
-      
-      <tag>Fluid</tag>
       
       <tag>静态网站</tag>
       
+      <tag>博客搭建</tag>
+      
+      <tag>Fluid</tag>
+      
       <tag>前端开发</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hexo博客更新部署完全指南</title>
+    <link href="/HexoBlog/2025/01/20/Hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E9%83%A8%E7%BD%B2%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/"/>
+    <url>/HexoBlog/2025/01/20/Hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E9%83%A8%E7%BD%B2%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Hexo博客更新部署完全指南"><a href="#Hexo博客更新部署完全指南" class="headerlink" title="Hexo博客更新部署完全指南"></a>Hexo博客更新部署完全指南</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>搭建好 Hexo 博客后，日常的内容更新和部署是维护博客的重要环节。本文将详细介绍如何高效地更新和部署你的 Hexo 博客，让你轻松管理个人网站。</p><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul><li><a href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">快速开始</a></li><li><a href="#%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0">创建新文章</a></li><li><a href="#%E7%BC%96%E8%BE%91%E6%96%87%E7%AB%A0%E5%86%85%E5%AE%B9">编辑文章内容</a></li><li><a href="#%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88">本地预览</a></li><li><a href="#%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF">部署上线</a></li><li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5">常用命令速查</a></li><li><a href="#%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">最佳实践</a></li><li><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4">故障排除</a></li></ul><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="🚀-一键更新部署（推荐）"><a href="#🚀-一键更新部署（推荐）" class="headerlink" title="🚀 一键更新部署（推荐）"></a>🚀 一键更新部署（推荐）</h3><p>最简单的更新方式，一条命令完成所有操作：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure><p>这个命令会：</p><ol><li><strong>清理</strong>：删除旧的生成文件</li><li><strong>生成</strong>：重新生成静态文件</li><li><strong>部署</strong>：自动推送到 GitHub Pages</li></ol><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><h3 id="1-使用命令行创建"><a href="#1-使用命令行创建" class="headerlink" title="1. 使用命令行创建"></a>1. 使用命令行创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;文章标题&quot;</span><br></code></pre></td></tr></table></figure><p>这会在 <code>source/_posts/</code> 目录下创建一个新的 Markdown 文件。</p><h3 id="2-手动创建"><a href="#2-手动创建" class="headerlink" title="2. 手动创建"></a>2. 手动创建</h3><p>你也可以直接在 <code>source/_posts/</code> 目录下手动创建 <code>.md</code> 文件。</p><h3 id="3-文章-Front-matter"><a href="#3-文章-Front-matter" class="headerlink" title="3. 文章 Front-matter"></a>3. 文章 Front-matter</h3><p>每篇文章的头部需要包含以下信息：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">文章标题</span><br><span class="hljs-attr">date:</span> <span class="hljs-number">2025-01-20 15:00:00</span><br><span class="hljs-attr">updated:</span> <span class="hljs-number">2025-01-20 15:00:00</span><br><span class="hljs-attr">categories:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">技术教程</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Hexo</span><br><span class="hljs-attr">tags:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">Hexo</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">博客部署</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Pages</span><br><span class="hljs-attr">keywords:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">关键词1</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">关键词2</span><br><span class="hljs-attr">description:</span> <span class="hljs-string">文章描述</span><br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure><h2 id="编辑文章内容"><a href="#编辑文章内容" class="headerlink" title="编辑文章内容"></a>编辑文章内容</h2><h3 id="1-使用-Markdown-语法"><a href="#1-使用-Markdown-语法" class="headerlink" title="1. 使用 Markdown 语法"></a>1. 使用 Markdown 语法</h3><p>Hexo 支持完整的 Markdown 语法：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><span class="hljs-section"># 一级标题</span><br><span class="hljs-section">## 二级标题</span><br><span class="hljs-section">### 三级标题</span><br><br><span class="hljs-strong">**粗体文本**</span><br><span class="hljs-emphasis">*斜体文本*</span><br><br><span class="hljs-bullet">-</span> 列表项1<br><span class="hljs-bullet">-</span> 列表项2<br><br>[<span class="hljs-string">链接文本</span>](<span class="hljs-link">URL</span>)<br><br>![<span class="hljs-string">图片描述</span>](<span class="hljs-link">图片URL</span>)<br><br><span class="hljs-code">`代码片段`</span><br><br><span class="hljs-code">```javascript</span><br><span class="hljs-code">// 代码块</span><br><span class="hljs-code">function hello() &#123;</span><br><span class="hljs-code">    console.log(&quot;Hello World!&quot;);</span><br><span class="hljs-code">&#125;</span><br></code></pre></td></tr></table></figure><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><br>### <span class="hljs-number">2</span>. 插入图片<br><br>将图片放在 `source/img/` 目录下，然后在文章中引用：<br><br>```markdown<br>![图片描述](/img/图片名称.jpg)<br></code></pre></td></tr></table></figure><h3 id="3-使用-Fluid-主题标签"><a href="#3-使用-Fluid-主题标签" class="headerlink" title="3. 使用 Fluid 主题标签"></a>3. 使用 Fluid 主题标签</h3><p>Fluid 主题提供了丰富的标签功能：</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs markdown">&#123;% note primary %&#125;<br>这是一个提示框<br>&#123;% endnote %&#125;<br><br>&#123;% tabs 标签页 %&#125;<br>&lt;!-- tab 标签1 --&gt;<br>内容1<br>&lt;!-- endtab --&gt;<br>&lt;!-- tab 标签2 --&gt;<br>内容2<br>&lt;!-- endtab --&gt;<br>&#123;% endtabs %&#125;<br></code></pre></td></tr></table></figure><h2 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h2><h3 id="启动本地服务器"><a href="#启动本地服务器" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure><p>然后访问 <code>http://localhost:4000</code> 预览你的博客。</p><h3 id="实时预览"><a href="#实时预览" class="headerlink" title="实时预览"></a>实时预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server --draft<br></code></pre></td></tr></table></figure><p>这会显示草稿文章。</p><h2 id="部署上线"><a href="#部署上线" class="headerlink" title="部署上线"></a>部署上线</h2><h3 id="1-生成静态文件"><a href="#1-生成静态文件" class="headerlink" title="1. 生成静态文件"></a>1. 生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate<br><span class="hljs-comment"># 或简写</span><br>hexo g<br></code></pre></td></tr></table></figure><h3 id="2-部署到-GitHub-Pages"><a href="#2-部署到-GitHub-Pages" class="headerlink" title="2. 部署到 GitHub Pages"></a>2. 部署到 GitHub Pages</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br><span class="hljs-comment"># 或简写</span><br>hexo d<br></code></pre></td></tr></table></figure><h3 id="3-一键部署（推荐）"><a href="#3-一键部署（推荐）" class="headerlink" title="3. 一键部署（推荐）"></a>3. 一键部署（推荐）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure><h2 id="常用命令速查"><a href="#常用命令速查" class="headerlink" title="常用命令速查"></a>常用命令速查</h2><table><thead><tr><th>命令</th><th>简写</th><th>说明</th></tr></thead><tbody><tr><td><code>hexo new &quot;标题&quot;</code></td><td>-</td><td>创建新文章</td></tr><tr><td><code>hexo new page &quot;页面名&quot;</code></td><td>-</td><td>创建新页面</td></tr><tr><td><code>hexo clean</code></td><td>-</td><td>清理生成文件</td></tr><tr><td><code>hexo generate</code></td><td><code>hexo g</code></td><td>生成静态文件</td></tr><tr><td><code>hexo deploy</code></td><td><code>hexo d</code></td><td>部署到 GitHub Pages</td></tr><tr><td><code>hexo server</code></td><td><code>hexo s</code></td><td>启动本地服务器</td></tr><tr><td><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></td><td>-</td><td>一键更新部署</td></tr></tbody></table><h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><h3 id="1-工作流程"><a href="#1-工作流程" class="headerlink" title="1. 工作流程"></a>1. 工作流程</h3><ol><li><strong>创建文章</strong>：<code>hexo new &quot;标题&quot;</code></li><li><strong>编辑内容</strong>：使用你喜欢的编辑器</li><li><strong>本地预览</strong>：<code>hexo server</code> 检查效果</li><li><strong>部署上线</strong>：<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li></ol><h3 id="2-版本管理"><a href="#2-版本管理" class="headerlink" title="2. 版本管理"></a>2. 版本管理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 提交源代码到 Git</span><br>git add .<br>git commit -m <span class="hljs-string">&quot;添加新文章：文章标题&quot;</span><br>git push<br></code></pre></td></tr></table></figure><h3 id="3-自动化脚本"><a href="#3-自动化脚本" class="headerlink" title="3. 自动化脚本"></a>3. 自动化脚本</h3><p>创建 <code>update.bat</code> 文件（Windows）：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs batch">@echo off<br>echo 正在更新博客...<br>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br>echo 更新完成！<br>pause<br></code></pre></td></tr></table></figure><p>创建 <code>update.sh</code> 文件（Linux&#x2F;Mac）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;正在更新博客...&quot;</span><br>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;更新完成！&quot;</span><br></code></pre></td></tr></table></figure><h3 id="4-定期备份"><a href="#4-定期备份" class="headerlink" title="4. 定期备份"></a>4. 定期备份</h3><ul><li>定期将源代码推送到 GitHub</li><li>备份重要的配置文件</li><li>保存自定义的主题文件</li></ul><h2 id="故障排除"><a href="#故障排除" class="headerlink" title="故障排除"></a>故障排除</h2><h3 id="1-部署失败"><a href="#1-部署失败" class="headerlink" title="1. 部署失败"></a>1. 部署失败</h3><p><strong>问题</strong>：<code>hexo deploy</code> 失败<br><strong>解决</strong>：</p><ul><li>检查网络连接</li><li>确认 GitHub 仓库权限</li><li>检查 SSH 密钥配置</li></ul><h3 id="2-页面显示异常"><a href="#2-页面显示异常" class="headerlink" title="2. 页面显示异常"></a>2. 页面显示异常</h3><p><strong>问题</strong>：部署后页面显示不正确<br><strong>解决</strong>：</p><ul><li>运行 <code>hexo clean</code> 清理缓存</li><li>检查主题配置</li><li>查看浏览器控制台错误</li></ul><h3 id="3-图片无法显示"><a href="#3-图片无法显示" class="headerlink" title="3. 图片无法显示"></a>3. 图片无法显示</h3><p><strong>问题</strong>：图片显示 404 错误<br><strong>解决</strong>：</p><ul><li>确认图片路径正确</li><li>检查图片是否在 <code>source/img/</code> 目录</li><li>重新生成和部署</li></ul><h3 id="4-搜索功能异常"><a href="#4-搜索功能异常" class="headerlink" title="4. 搜索功能异常"></a>4. 搜索功能异常</h3><p><strong>问题</strong>：本地搜索不工作<br><strong>解决</strong>：</p><ul><li>确认生成了 <code>local-search.xml</code> 文件</li><li>检查 Fluid 主题搜索配置</li><li>清除浏览器缓存</li></ul><h2 id="高级技巧"><a href="#高级技巧" class="headerlink" title="高级技巧"></a>高级技巧</h2><h3 id="1-草稿功能"><a href="#1-草稿功能" class="headerlink" title="1. 草稿功能"></a>1. 草稿功能</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 创建草稿</span><br>hexo new draft <span class="hljs-string">&quot;草稿标题&quot;</span><br><br><span class="hljs-comment"># 发布草稿</span><br>hexo publish <span class="hljs-string">&quot;草稿标题&quot;</span><br></code></pre></td></tr></table></figure><h3 id="2-多环境部署"><a href="#2-多环境部署" class="headerlink" title="2. 多环境部署"></a>2. 多环境部署</h3><p>可以配置多个部署目标：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>    <span class="hljs-attr">repo:</span> <span class="hljs-string">git@github.com:username/repo.git</span><br>    <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>    <span class="hljs-attr">repo:</span> <span class="hljs-string">git@gitlab.com:username/repo.git</span><br>    <span class="hljs-attr">branch:</span> <span class="hljs-string">main</span><br></code></pre></td></tr></table></figure><h3 id="3-自定义域名"><a href="#3-自定义域名" class="headerlink" title="3. 自定义域名"></a>3. 自定义域名</h3><p>在 <code>source/</code> 目录下创建 <code>CNAME</code> 文件：</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim">yourdomain.<span class="hljs-keyword">com</span><br></code></pre></td></tr></table></figure><h3 id="4-性能优化"><a href="#4-性能优化" class="headerlink" title="4. 性能优化"></a>4. 性能优化</h3><ul><li>压缩图片</li><li>使用 CDN</li><li>启用 Gzip 压缩</li><li>优化 CSS 和 JS</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过本文的指南，你应该能够：</p><ol><li>✅ 熟练创建和编辑文章</li><li>✅ 使用本地预览功能</li><li>✅ 一键部署到 GitHub Pages</li><li>✅ 掌握常用命令和最佳实践</li><li>✅ 解决常见问题</li></ol><p>记住，<strong>一键更新命令</strong>是你的好朋友：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy<br></code></pre></td></tr></table></figure><p>现在开始写你的博客吧！🎉</p><hr><p><strong>相关文章</strong>：</p><ul><li><a href="/2025/07/26/hexo-fluid-configuration-guide/">Hexo + Fluid 主题配置完全指南</a></li><li><a href="/2025/01/20/about-page-configuration-guide/">About 页面配置完全指南</a></li></ul><p><strong>最后更新</strong>：2025年1月20日</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术教程</category>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>博客部署</tag>
+      
+      <tag>GitHub Pages</tag>
+      
+      <tag>静态网站</tag>
+      
+      <tag>网站维护</tag>
+      
+      <tag>内容管理</tag>
       
     </tags>
     
@@ -83,6 +107,8 @@
     
     <tags>
       
+      <tag>内容管理</tag>
+      
       <tag>About页面</tag>
       
       <tag>页面配置</tag>
@@ -92,8 +118,6 @@
       <tag>博客搭建</tag>
       
       <tag>主题定制</tag>
-      
-      <tag>内容管理</tag>
       
     </tags>
     
