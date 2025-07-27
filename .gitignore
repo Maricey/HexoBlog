@@ -7,17 +7,11 @@ db.json
 _multiconfig.yml
 
 # 忽略构建生成的静态文件（这些应该在public目录中）
-*.html
 !public/*.html
-css/
 !public/css/
-js/
 !public/js/
-img/
 !public/img/
-xml/
 !public/xml/
-local-search.xml
 !public/local-search.xml
 
 # Logs
