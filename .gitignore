@@ -2,7 +2,9 @@
 node_modules/
 public/
 .deploy_git/
+.deploy*/
 db.json
+_multiconfig.yml
 
 # Logs
 logs
@@ -24,7 +26,6 @@ coverage/
 .nyc_output
 
 # Dependency directories
-node_modules/
 jspm_packages/
 
 # Optional npm cache directory
@@ -50,4 +51,4 @@ jspm_packages/
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db
