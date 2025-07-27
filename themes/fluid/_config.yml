@@ -986,7 +986,7 @@ about:
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/Maricey", tip: "GitHub" }
     - { class: "iconfont icon-douban-fill", link: "https://douban.com", tip: "豆瓣" }
-    - { class: "iconfont icon-wechat-fill", qrcode: "/img/Wechat.jpg" }
+    - { class: "iconfont icon-wechat-fill", link："https://maricey.github.io/HexoBlog/img/Wechat.jpg", tip: "微信" }
 
 
 #---------------------------
