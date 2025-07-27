@@ -3,7 +3,7 @@ title: Hexo博客更新部署完全指南
 date: 2025-01-20 15:00:00
 updated: 2025-01-20 15:00:00
 categories:
-  - 技术教程
+  - Blog
   - Hexo
 tags:
   - Hexo

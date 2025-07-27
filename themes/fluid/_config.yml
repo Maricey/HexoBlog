@@ -918,7 +918,7 @@ discuss:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/Ganyu.jpg
+  banner_img: /img/GanYu.jpg
   banner_img_height: 60
   banner_mask_alpha: 0.3
 

@@ -3,7 +3,7 @@ title: Hexo + Fluid 主题配置完全指南
 date: 2025-07-26 10:00:00
 updated: 2025-07-26 10:00:00
 categories: 
-  - Skills
+  - Blog
   - Hexo
 tags:
   - Hexo

@@ -3,21 +3,13 @@ title: About 页面配置完全指南
 date: 2025-01-20 14:00:00
 updated: 2025-01-20 14:00:00
 categories: 
-  - Skills
+  - Blog
   - Hexo
 tags:
   - About页面
-  - 页面配置
   - 个人介绍
-  - 博客搭建
-  - 主题定制
-  - 内容管理
 keywords: 
   - About页面配置
-  - 个人介绍页面
-  - 博客页面设置
-  - 主题页面定制
-  - 内容管理
 description: 详细介绍如何配置 Hexo + Fluid 主题的 About 页面，包括页面创建、内容编写、样式定制等各个方面。
 ---
 
